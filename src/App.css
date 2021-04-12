@@ -6,3 +6,8 @@
   flex-direction: column;
   align-items: center;
 }
+
+.App .plyr {
+  width: 100%;
+  height: 100%;
+}

@@ -1,16 +1,23 @@
-import Player from "react-player";
+import Plyr from "plyr-react";
+import "plyr-react/dist/plyr.css";
 import "./App.css";
 
 function App() {
+  const videoSrc = {
+    type: "video",
+    sources: [
+      {
+        src: "https://youtu.be/BHACKCNDMW8",
+        provider: "youtube",
+      },
+    ],
+  };
+
   return (
     <div className="App">
-      <h1>Singapore Event Testing</h1>
-      <Player style={{outline:"none"}}
-        url="https://eefileupload.s3.us-east-2.amazonaws.com/sample_video.mp4"
-        controls={true}
-        width="100%"
-        height="100%"
-      />
+      <h1>Video Player</h1>
+
+      <Plyr source={videoSrc} />
     </div>
   );
 }
